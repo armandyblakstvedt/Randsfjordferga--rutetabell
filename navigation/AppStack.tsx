@@ -17,6 +17,7 @@ export default function AppStack() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#67e8f9",
+        tabBarLabelPosition: "below-icon",
       }}
     >
       <Tab.Screen
