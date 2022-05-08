@@ -1,4 +1,4 @@
-import { Text, VStack } from "native-base";
+import { Badge, Text, VStack } from "native-base";
 import React, { useState, useEffect } from "react";
 import NextFerry from "./NextFerry";
 import TwoMore from "./TwoMore";
@@ -84,7 +84,7 @@ export default function CountdownContent({
       width="100%"
       justifyContent="space-evenly"
       alignItems="center"
-      space="20%"
+      space="40%"
     >
       <NextFerry fergetider={filteredFergetider()} timeLeft={timeLeftArray()} />
       <TwoMore fergetider={filteredFergetider()} timeLeft={timeLeftArray()} />

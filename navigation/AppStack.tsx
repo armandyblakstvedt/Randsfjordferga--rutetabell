@@ -1,18 +1,51 @@
-import * as React from "react";
+import React from "react";
 import Main from "../pages/Main";
 import Info from "../pages/Info";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import FerryIcon from "react-native-vector-icons/MaterialIcons";
+import NoteIcon from "react-native-vector-icons/FontAwesome";
+import InfoIcon from "react-native-vector-icons/Feather";
 
-const Drawer = createDrawerNavigator();
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Rutetabell from "../pages/Rutetabell";
+
+const Tab = createBottomTabNavigator();
 
 export default function AppStack() {
   return (
-    <Drawer.Navigator
+    <Tab.Navigator
       initialRouteName="Rutetider"
-      screenOptions={{ headerShown: false }}
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: "#67e8f9",
+      }}
     >
-      <Drawer.Screen name="Rutetider" component={Main} />
-      <Drawer.Screen name="Info" component={Info} />
-    </Drawer.Navigator>
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <NoteIcon name="sticky-note" color={color} size={30} />
+          ),
+        }}
+        name="Rutetabell"
+        component={Rutetabell}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FerryIcon name="directions-ferry" color={color} size={30} />
+          ),
+        }}
+        name="Rutetider"
+        component={Main}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <InfoIcon name="info" color={color} size={30} />
+          ),
+        }}
+        name="Info"
+        component={Info}
+      />
+    </Tab.Navigator>
   );
 }

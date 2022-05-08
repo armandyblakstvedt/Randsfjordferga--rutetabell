@@ -1,14 +1,13 @@
 import {
-  Center,
+  Badge,
   Circle,
   HStack,
   Menu,
   Text,
   useBreakpointValue,
-  View,
   VStack,
 } from "native-base";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import FerryIcon from "react-native-vector-icons/MaterialIcons";
 import { Animated, Easing, Pressable } from "react-native";
@@ -65,27 +64,11 @@ export default function Tabnavigation({
       position="absolute"
     >
       <Circle marginBottom={2}>
-        <Menu
-          w="190"
-          trigger={(triggerProps) => {
-            return (
-              <Pressable
-                accessibilityLabel="More options menu"
-                {...triggerProps}
-              >
-                <FerryIcon color="#67e8f9" size={40} name="directions-ferry" />
-              </Pressable>
-            );
-          }}
-          placement="bottom"
-        >
-          <Menu.Item onPress={() => console.log("  ")}>Info</Menu.Item>
-          <Menu.Item isDisabled>Admin</Menu.Item>
-        </Menu>
+        <FerryIcon color="#67e8f9" size={40} name="directions-ferry" />
       </Circle>
       <Text textAlign="center">Reiser fra:</Text>
       <HStack
-        bg="primary.50"
+        bg="white"
         overflow="hidden"
         borderRadius={20}
         justifyContent="space-evenly"
@@ -132,7 +115,7 @@ export default function Tabnavigation({
           Tangen
         </Text>
       </HStack>
-      <Circle margin="auto" top="-15" shadow={5} size="50px" bg="primary.50">
+      <Circle margin="auto" top="-15" shadow={5} size="50px" bg="white">
         <Animated.View
           style={{
             transform: [

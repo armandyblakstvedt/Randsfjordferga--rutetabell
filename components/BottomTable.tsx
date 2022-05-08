@@ -133,6 +133,9 @@ export default function BottomTable({
               <Icon1 name="chevron-thin-right" size={50} color="#999" />
             </TouchableWithoutFeedback>
           </HStack>
+          <Badge alignSelf="center" colorScheme="success">
+            Gyldig fra dd.mm.åå til dd.mm.åå
+          </Badge>
           <HStack marginTop="5%" justifyContent="space-evenly" width="100%">
             <VStack space={2}>
               <Text textAlign="center" fontSize={TextFontsize}>
@@ -150,7 +153,7 @@ export default function BottomTable({
         </ScrollView>
       );
     } else {
-      return <Text fontSize={TextFontsize}>Se rutetider</Text>;
+      return <Text fontSize={TextFontsize}>Rutetider</Text>;
     }
   };
 

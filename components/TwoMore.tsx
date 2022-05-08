@@ -23,7 +23,6 @@ export default function TwoMore({
 
   return (
     <HStack
-      bg="primary.50"
       justifyContent="space-evenly"
       height="25%"
       borderRadius="lg"

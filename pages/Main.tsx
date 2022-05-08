@@ -1,4 +1,4 @@
-import { VStack } from "native-base";
+import { Badge, VStack } from "native-base";
 import React, { useEffect, useState } from "react";
 import BottomTable from "../components/BottomTable";
 import Tabnavigation from "../components/Tabnavigation";
@@ -53,20 +53,15 @@ export default function Main({ navigation }: { navigation: any }) {
             fergetiderHorn={fergetiderHorn}
             fergetiderTangen={fergetiderTangen}
           />
-          <BottomTable
-            horn={horn}
-            fergetiderHorn={fergetiderHorn}
-            fergetiderTangen={fergetiderTangen}
-          />
         </>
       );
     }
   };
   return (
     <VStack
+      bg="white"
       width="100%"
       height="100%"
-      bg="primary.50"
       margin="auto"
       alignItems="center"
       justifyContent="center"
