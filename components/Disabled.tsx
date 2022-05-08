@@ -9,7 +9,7 @@ import {
 } from "native-base";
 import React from "react";
 
-export default function Disabled({ melding }: { melding: string }) {
+export default function Disabled({ driftsMelding }: { driftsMelding: string }) {
   return (
     <Center>
       <Alert w="90%" maxW="400" status="info" colorScheme="info">
@@ -39,7 +39,7 @@ export default function Disabled({ melding }: { melding: string }) {
               color: "coolGray.600",
             }}
           >
-            {melding}
+            {driftsMelding}
           </Box>
         </VStack>
       </Alert>

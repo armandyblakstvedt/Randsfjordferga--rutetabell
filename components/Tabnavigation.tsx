@@ -52,8 +52,8 @@ export default function Tabnavigation({
       width="70%"
       borderRadius={20}
       shadow={1}
-      top="5%"
       position="absolute"
+      top={12}
     >
       <Circle marginBottom={2}>
         <FerryIcon color="#67e8f9" size={40} name="directions-ferry" />

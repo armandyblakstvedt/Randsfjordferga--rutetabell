@@ -64,7 +64,7 @@ export default function Main({ navigation }: { navigation: any }) {
       height="100%"
       margin="auto"
       alignItems="center"
-      justifyContent="center"
+      justifyContent="space-evenly"
     >
       {Content()}
     </VStack>

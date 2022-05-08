@@ -6,6 +6,9 @@ import {
   HStack,
   Text,
   Divider,
+  View,
+  Center,
+  Box,
 } from "native-base";
 import { ScrollView, TouchableWithoutFeedback } from "react-native";
 import React, { useEffect, useState } from "react";
@@ -97,30 +100,6 @@ export default function Rutetabell() {
     if (!loading) {
       return (
         <>
-          <HStack
-            margin="auto"
-            width="90%"
-            justifyContent="space-evenly"
-            alignItems="center"
-          >
-            <TouchableWithoutFeedback
-              onPress={() => setDay(day == 0 ? 6 : day - 1)}
-            >
-              <Icon1 name="chevron-thin-left" size={50} color="#999" />
-            </TouchableWithoutFeedback>
-            <Heading fontSize={HeadingFontsize} textAlign="center">
-              {daytoday[day]}
-            </Heading>
-            <TouchableWithoutFeedback
-              onPress={() => setDay(day == 6 ? 0 : day + 1)}
-            >
-              <Icon1 name="chevron-thin-right" size={50} color="#999" />
-            </TouchableWithoutFeedback>
-          </HStack>
-          <Divider my="2" />
-          <Badge alignSelf="center" colorScheme="success">
-            Gyldig fra dd.mm.åå til dd.mm.åå
-          </Badge>
           <HStack marginTop="5%" justifyContent="space-evenly" width="100%">
             <VStack space={2}>
               <Text textAlign="center" fontSize={TextFontsize}>
@@ -143,10 +122,40 @@ export default function Rutetabell() {
   };
 
   return (
-    <ScrollView
-      style={{ backgroundColor: "#ffff", width: "100%", paddingTop: "10%" }}
-    >
-      {Content()}
-    </ScrollView>
+    <>
+      <VStack height="100%" width="100%" paddingTop="15%" bg="white">
+        <Heading
+          fontSize={HeadingFontsize}
+          textAlign="center"
+          color="muted.700"
+        >
+          Rutetabell
+        </Heading>
+
+        <ScrollView style={{ width: "100%" }}>{Content()}</ScrollView>
+        <HStack
+          shadow={4}
+          bg="white"
+          height="15%"
+          width="100%"
+          justifyContent="space-evenly"
+          alignItems="center"
+        >
+          <TouchableWithoutFeedback
+            onPress={() => setDay(day == 0 ? 6 : day - 1)}
+          >
+            <Icon1 name="chevron-thin-left" size={50} color="#999" />
+          </TouchableWithoutFeedback>
+          <Heading fontSize={HeadingFontsize} textAlign="center">
+            {daytoday[day]}
+          </Heading>
+          <TouchableWithoutFeedback
+            onPress={() => setDay(day == 6 ? 0 : day + 1)}
+          >
+            <Icon1 name="chevron-thin-right" size={50} color="#999" />
+          </TouchableWithoutFeedback>
+        </HStack>
+      </VStack>
+    </>
   );
 }

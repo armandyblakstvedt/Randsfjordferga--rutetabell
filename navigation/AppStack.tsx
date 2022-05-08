@@ -21,17 +21,17 @@ export default function AppStack() {
     >
       <Tab.Screen
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <NoteIcon name="sticky-note" color={color} size={30} />
+          tabBarIcon: ({ color }) => (
+            <InfoIcon name="info" color={color} size={35} />
           ),
         }}
-        name="Rutetabell"
-        component={Rutetabell}
+        name="Info"
+        component={Info}
       />
       <Tab.Screen
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <FerryIcon name="directions-ferry" color={color} size={30} />
+          tabBarIcon: ({ color }) => (
+            <FerryIcon name="directions-ferry" color={color} size={35} />
           ),
         }}
         name="Rutetider"
@@ -39,12 +39,12 @@ export default function AppStack() {
       />
       <Tab.Screen
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <InfoIcon name="info" color={color} size={30} />
+          tabBarIcon: ({ color }) => (
+            <NoteIcon name="sticky-note" color={color} size={35} />
           ),
         }}
-        name="Info"
-        component={Info}
+        name="Rutetabell"
+        component={Rutetabell}
       />
     </Tab.Navigator>
   );
