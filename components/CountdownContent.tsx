@@ -1,4 +1,4 @@
-import { Badge, Text, VStack } from "native-base";
+import { VStack } from "native-base";
 import React, { useState, useEffect } from "react";
 import NextFerry from "./NextFerry";
 import TwoMore from "./TwoMore";

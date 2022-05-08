@@ -1,16 +1,8 @@
-import {
-  Badge,
-  Circle,
-  HStack,
-  Menu,
-  Text,
-  useBreakpointValue,
-  VStack,
-} from "native-base";
+import { Circle, HStack, Text, useBreakpointValue, VStack } from "native-base";
 import React, { useRef } from "react";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import FerryIcon from "react-native-vector-icons/MaterialIcons";
-import { Animated, Easing, Pressable } from "react-native";
+import { Animated, Easing } from "react-native";
 
 export default function Tabnavigation({
   horn,

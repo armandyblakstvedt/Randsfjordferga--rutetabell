@@ -1,5 +1,5 @@
-import { Heading, HStack, Text, VStack, ZStack } from "native-base";
-import React, { useState } from "react";
+import { HStack, Text, VStack, ZStack } from "native-base";
+import React from "react";
 
 export default function FerryStack({
   width,

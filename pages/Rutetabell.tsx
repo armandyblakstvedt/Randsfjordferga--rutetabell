@@ -144,7 +144,7 @@ export default function Rutetabell() {
 
   return (
     <ScrollView
-      style={{ backgroundColor: "#ffff", width: "100%", padding: "10%" }}
+      style={{ backgroundColor: "#ffff", width: "100%", paddingTop: "10%" }}
     >
       {Content()}
     </ScrollView>

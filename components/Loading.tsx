@@ -1,4 +1,4 @@
-import { Heading, HStack, Spinner, Text, VStack } from "native-base";
+import { Heading, HStack, Spinner, VStack } from "native-base";
 import React, { useEffect, useState } from "react";
 
 export default function Loading() {
