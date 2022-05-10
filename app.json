@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "randsfjordferja",
-    "slug": "randsfjordferja",
-    "version": "1.2.0",
+    "name": "Fergetider",
+    "slug": "Fergetider",
+    "version": "1.2.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -19,11 +19,11 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.fergetider",
-      "buildNumber": "13"
+      "buildNumber": "15"
     },
     "android": {
-      "versionCode": 3,
-      "permissions": ["VIBRATE", "READ_EXTERNAL_STORAGE", "READ_PHONE_STATE", "READ_CALENDAR", "WRITE_EXTERNAL_STORAGE"],
+      "versionCode": 5,
+      "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"

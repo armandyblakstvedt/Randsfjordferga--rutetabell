@@ -13,7 +13,6 @@ export default function CountdownContent({
   fergetiderTangen: Array<Array<string>>;
 }) {
   const [date, setDate] = useState(new Date());
-
   const filteredFergetider = (): Array<string> => {
     let relevantTimes = [];
     if (horn) {
@@ -46,9 +45,9 @@ export default function CountdownContent({
     };
     const MinutesLeft = (): number => {
       if (targetTime >= currTime) {
-        return (targetTime - currTime) % 60;
+        return Math.round((targetTime - currTime) % 60);
       } else {
-        return (24 * 60 - currTime + targetTime) % 60;
+        return Math.round((24 * 60 - currTime + targetTime) % 60);
       }
     };
     return [HoursLeft(), MinutesLeft()];
