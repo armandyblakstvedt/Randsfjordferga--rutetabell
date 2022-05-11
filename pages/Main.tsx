@@ -1,6 +1,5 @@
-import { Badge, VStack } from "native-base";
+import { VStack } from "native-base";
 import React, { useEffect, useState } from "react";
-import BottomTable from "../components/BottomTable";
 import Tabnavigation from "../components/Tabnavigation";
 import { db } from "../firebase";
 import { onSnapshot, doc } from "firebase/firestore";

@@ -6,9 +6,6 @@ import {
   HStack,
   Text,
   Divider,
-  View,
-  Center,
-  Box,
 } from "native-base";
 import { ScrollView, TouchableWithoutFeedback } from "react-native";
 import React, { useEffect, useState } from "react";

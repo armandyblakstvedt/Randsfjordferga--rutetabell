@@ -2,7 +2,6 @@ import { extendTheme, NativeBaseProvider } from "native-base";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "react-native";
 import AppStack from "./navigation/AppStack";
-import Main from "./pages/Main";
 import "react-native-gesture-handler";
 export default function App() {
   const theme = extendTheme({
