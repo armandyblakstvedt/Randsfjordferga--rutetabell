@@ -20,7 +20,7 @@ import Loading from "../components/Loading";
 export default function Rutetabell() {
   const [date, setDate] = useState(new Date());
   const [day, setDay] = useState(date.getDay());
-
+  const [gyldighet, setGyldighet] = useState("");
   const [fergetiderHorn, setFergetiderHorn] = useState();
   const [fergetiderTangen, setFergetiderTangen] = useState();
   const [loading, setLoading] = useState(true);
@@ -35,6 +35,7 @@ export default function Rutetabell() {
         setFergetiderHorn(Object.values(data.Horn));
         setFergetiderTangen(Object.values(data.Tangen));
       }
+      setGyldighet(data.gyldighet);
       setLoading(false);
       return () => unsub();
     });
@@ -131,7 +132,9 @@ export default function Rutetabell() {
         >
           Rutetabell
         </Heading>
-
+        <Badge rounded={10} colorScheme="success" alignSelf="center">
+          {gyldighet}
+        </Badge>
         <ScrollView style={{ width: "100%" }}>{Content()}</ScrollView>
         <HStack
           shadow={4}
