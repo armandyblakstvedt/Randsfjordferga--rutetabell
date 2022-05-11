@@ -11,7 +11,7 @@ export default function TwoMore({
 }) {
   const bigFontsize = useBreakpointValue({
     base: 20,
-    sm: 30,
+    sm: 40,
     md: 60,
   });
 

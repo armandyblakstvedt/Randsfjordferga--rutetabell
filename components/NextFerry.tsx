@@ -11,7 +11,7 @@ export default function NextFerry({
 }) {
   const bigFontsize = useBreakpointValue({
     base: 40,
-    sm: 70,
+    sm: 80,
     md: 100,
   });
 

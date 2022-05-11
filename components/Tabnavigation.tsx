@@ -48,30 +48,26 @@ export default function Tabnavigation({
   });
 
   return (
-    <VStack
-      width="70%"
-      borderRadius={20}
-      shadow={1}
-      position="absolute"
-      top={12}
-    >
+    <VStack width="70%" borderRadius={20} position="absolute" top={12}>
       <Circle marginBottom={2}>
         <FerryIcon color="#67e8f9" size={40} name="directions-ferry" />
       </Circle>
       <Text textAlign="center">Reiser fra:</Text>
       <HStack
         bg="white"
-        overflow="hidden"
+        shadow={1}
         borderRadius={20}
         justifyContent="space-evenly"
       >
         <Animated.View
           style={{
+            borderRadius: 20,
             height: "100%",
             width: "50%",
             position: "absolute",
             backgroundColor: "#67e8f9",
             left: move,
+            zIndex: -1,
           }}
         />
         <Text
@@ -87,6 +83,7 @@ export default function Tabnavigation({
           textAlign="center"
           bgColor="rgba(52, 52, 52, 0)"
           fontSize={fontsize}
+          fontWeight={horn ? "semibold" : "normal"}
         >
           Horn
         </Text>
@@ -103,6 +100,7 @@ export default function Tabnavigation({
           textAlign="center"
           fontSize={fontsize}
           bgColor="rgba(52, 52, 52, 0)"
+          fontWeight={!horn ? "semibold" : "normal"}
         >
           Tangen
         </Text>
