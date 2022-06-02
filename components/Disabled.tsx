@@ -11,9 +11,9 @@ import React from "react";
 
 export default function Disabled({ driftsMelding }: { driftsMelding: string }) {
   return (
-    <Center>
-      <Alert w="90%" maxW="400" status="info" colorScheme="info">
-        <VStack space={2} flexShrink={1} w="100%">
+    <Center width="90%">
+      <Alert width="100%" status="info" colorScheme="info">
+        <VStack space={2} flexShrink={1} width="100%">
           <HStack
             flexShrink={1}
             space={2}
@@ -26,12 +26,6 @@ export default function Disabled({ driftsMelding }: { driftsMelding: string }) {
                 Ferga er ute av drift!
               </Text>
             </HStack>
-            <IconButton
-              variant="unstyled"
-              _focus={{
-                borderWidth: 0,
-              }}
-            />
           </HStack>
           <Box
             pl="6"
