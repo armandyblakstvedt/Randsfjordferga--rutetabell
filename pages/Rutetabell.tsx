@@ -98,6 +98,16 @@ export default function Rutetabell() {
     if (!loading) {
       return (
         <>
+          <Heading
+            fontSize={HeadingFontsize}
+            textAlign="center"
+            color="muted.700"
+          >
+            Rutetabell
+          </Heading>
+          <Badge rounded={10} colorScheme="success" alignSelf="center">
+            {gyldighet}
+          </Badge>
           <HStack marginTop="5%" justifyContent="space-evenly" width="100%">
             <VStack space={2}>
               <Text textAlign="center" fontSize={TextFontsize}>
@@ -122,16 +132,6 @@ export default function Rutetabell() {
   return (
     <>
       <VStack height="100%" width="100%" paddingTop="15%" bg="white">
-        <Heading
-          fontSize={HeadingFontsize}
-          textAlign="center"
-          color="muted.700"
-        >
-          Rutetabell
-        </Heading>
-        <Badge rounded={10} colorScheme="success" alignSelf="center">
-          {gyldighet}
-        </Badge>
         <ScrollView style={{ width: "100%" }}>{Content()}</ScrollView>
         <HStack
           shadow={4}

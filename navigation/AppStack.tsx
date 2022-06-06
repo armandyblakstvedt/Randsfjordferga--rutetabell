@@ -3,7 +3,7 @@ import Main from "../pages/Main";
 import Info from "../pages/Info";
 import FerryIcon from "react-native-vector-icons/MaterialIcons";
 import NoteIcon from "react-native-vector-icons/FontAwesome";
-import InfoIcon from "react-native-vector-icons/Feather";
+import MoreIcon from "react-native-vector-icons/Feather";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Rutetabell from "../pages/Rutetabell";
@@ -23,10 +23,10 @@ export default function AppStack() {
       <Tab.Screen
         options={{
           tabBarIcon: ({ color }) => (
-            <InfoIcon name="info" color={color} size={35} />
+            <MoreIcon name="more-horizontal" color={color} size={35} />
           ),
         }}
-        name="Info"
+        name="Mer"
         component={Info}
       />
       <Tab.Screen
